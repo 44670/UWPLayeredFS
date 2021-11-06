@@ -10,13 +10,13 @@ Apply translations or mods to UWP apps without having to unpack/repack the app.
 
     (For example: `Launcher.exe notepad.exe`)
 
-4. Now you can start you UWP app, and it will apply the translations or mods.
+4. Now you can start your UWP app, and it will apply the translations or mods.
 5. If you no longer need the LayeredFS, you can press any key in the terminal to exit.
 
 # Limitations
 
 1. Only amd64 is supported for now.
-2. If the UWP app read resource files before creating the window, LayeredFS will not work.
+2. If the UWP app reads resource files before creating the window, LayeredFS will not work.
 
     (This is because our code is activated as soon as the first window of UWP app is created.)
 3. A DLL is loaded into the UWP app, and it intercepts the `NtCreateFile` function. Which may be not compatible with some anti-tampering software. **DO NOT use this on a Multi-Player game.**
